@@ -23,10 +23,11 @@
           <i class="fas fa-bars fa-2xl"></i>
         </button>
         <ul class="dropdown">
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
+          <li><a href=""><i class="fa fa-home"></i>Home</a></li>
+          <li><a href=""><i class="fa fa-paper-plane"></i>Submit Complaint</a></li>
+          <li><a href=""><i class="fa fa-bars-progress"></i>Track Status</a></li>
+          <li><a href=""><i class="fa fa-gauge"></i>Staff DashBoard</a></li>  
+          <li><a href=""><i class="fa fa-right-to-bracket"></i>Login / Register</a></li>  
         </ul>
       </div>
     </nav>
@@ -117,5 +118,24 @@
       </div>
     </section>
 
+
+
+      <script>
+      const menuIcon = document.querySelector(".fa-bars");
+      const dropDownMenu = document.querySelector(".dropdown")
+
+      menuIcon.addEventListener(
+        "click", () =>{
+            dropDownMenu.classList.toggle("open");
+            if(dropDownMenu.classList.contains("open")){
+              menuIcon.classList.add("fa-x");
+              menuIcon.classList.remove("fa-bars");
+            } else{
+              menuIcon.classList.remove("fa-x");
+              menuIcon.classList.add("fa-bars");
+            }
+        }
+      )
+    </script>
   </body>
 </html>
