@@ -67,6 +67,10 @@ body {
   font-weight: normal;
 }
 
+.home-section{
+  display: block;
+}
+
 .dropdown-menu {
   display: flex;
   position: relative;
@@ -79,16 +83,16 @@ body {
   color: white;
   background: none;
   position: relative;
-  left: 20px;
+  left: 12vw;
   z-index: 100;
 }
 
 .dropdown {
   position: absolute;
-  padding: 0.8rem 0 1rem 0.8rem;
+  padding: 0.8rem .4rem 1rem 0.8rem;
   top: -90%;
-  right: -27px;
-  width: 600%;
+  right: -13vw;
+  width: 620%;
   background-color: rgba(162, 200, 236, 0.6);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -108,7 +112,7 @@ body {
 }
 
 .fa-x {
-  color: red;
+  color:red;
 }
 
 li {
@@ -116,7 +120,33 @@ li {
 }
 
 .dropdown li {
-  padding-block: 2rem;
+  padding-block: 1rem;
+  padding-inline: .5rem;
+  display: flex;
+  align-items: center;
+}
+
+.home{
+  margin-top: 5vh;
+  border: 1px solid white;
+  background-color:rgb(39, 118, 184);
+  border-radius: 10px;
+}
+
+.login{
+  border: 1px solid white;
+  background-color:rgb(14, 159, 243);
+  border-radius: 10px;
+}
+
+.dropdown li:not(.home,.login){
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #0d47a1;
+}
+
+.dropdown li:not(.home,.login) a{
+  color: rgb(149, 226, 245);
 }
 
 .dropdown li a {
@@ -124,6 +154,17 @@ li {
   font-size: 1.3rem;
   font-weight: bold;
   color: rgb(19, 32, 105);
+  display: block;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dropdown li:active{
+  background-color: aliceblue;
+}
+
+.dropdown li:active a{
+  color: black;
 }
 
 .hero {
@@ -160,12 +201,11 @@ li {
   gap: 1rem;
 }
 
-.hero-buttons button {
+.hero-buttons a {
   padding: 1rem;
   font-size: 1.1rem;
   font-weight: bold;
-  outline: none;
-  border: none;
+  text-decoration: none;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -173,14 +213,15 @@ li {
   border-radius: 10px;
 }
 
-.hero-buttons button:not(:last-child) {
+.hero-buttons a:not(:last-child) {
   background-color: orange;
+  color: black;
 }
 
-.hero-buttons button:last-child {
+.hero-buttons a:last-child {
   background-color: transparent;
-  border: 1px solid white;
   color: white;
+  border: 1px solid white;
 }
 
 .stats-con {
@@ -339,4 +380,92 @@ li {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
+}
+
+.submit-complaint{
+  background-color: rgba(171, 222, 241, 0.2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .5rem;
+  display: none;
+}
+
+.complaint-head {
+  display: flex;
+  flex-direction: column;
+}
+
+.complaint-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-around;
+}
+
+.complaint-head span{
+ background-color: rgba(111, 184, 253, 0.5);
+  width: max-content;
+  padding: 0.4rem;
+  color: blue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.complaint-head h2{
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.complaint-head p{
+  color: rgb(87, 85, 85);
+  font-size: 1.1rem;
+}
+
+.alert{
+  background-color: rgba(0, 174, 255, 0.1);
+  border: 1px solid rgba(0, 204, 255, 0.5);
+  padding: 1rem;
+  display: flex;
+  /* align-items: center; */
+  gap: .5rem;
+  border-radius: 10px;
+}
+
+.alert .icon{
+  font-size: 1.3rem;
+  background-color: transparent;
+}
+
+.complaint-head .alert p {
+  color: rgb(19, 32, 105);
+}
+
+.footer{
+  text-align: center;
+  background-color: #0a1628;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  color: grey;
+}
+
+.footer p{
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: rgb(209, 205, 205);
+}
+
+.footer p span{
+  font-size: 0.8rem;
+  color: grey;
+  font-weight: normal;
 }

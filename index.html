@@ -23,119 +23,197 @@
           <i class="fas fa-bars fa-2xl"></i>
         </button>
         <ul class="dropdown">
-          <li><a href=""><i class="fa fa-home"></i>Home</a></li>
-          <li><a href=""><i class="fa fa-paper-plane"></i>Submit Complaint</a></li>
-          <li><a href=""><i class="fa fa-bars-progress"></i>Track Status</a></li>
-          <li><a href=""><i class="fa fa-gauge"></i>Staff DashBoard</a></li>  
-          <li><a href=""><i class="fa fa-right-to-bracket"></i>Login / Register</a></li>  
+          <li class="home"
+            ><a href="#home-section" class="hom"
+              ><i class="fa fa-home"></i>Home</a
+            ></li
+          >
+          <li
+            ><a href="#submit-complaint" class="submit"
+              ><i class="fa fa-paper-plane"></i>Submit Complaint</a
+            ></li
+          >
+          <li
+            ><a href="#track-status"
+              ><i class="fa fa-bars-progress"></i>Track Status</a
+            ></li
+          >
+          <li
+            ><a href="#staff-dashboard"
+              ><i class="fa fa-gauge"></i>Staff DashBoard</a
+            ></li
+          >
+          <li class="login"
+            ><a href="#register"
+              ><i class="fa fa-right-to-bracket"></i>Register</a
+            ></li
+          >
         </ul>
       </div>
     </nav>
-    <section class="hero">
-      <h1>
-        Submit & Track Complaints <br />
-        <em>Quickly. Transparently</em>
-      </h1>
-      <p
-        >A dedicated digital platform for students of the School of Plateau ICT
-        to raise academic and administrative complaints - with real-time status
-        tracking and guaranteed staff response
-      </p>
-      <div class="hero-buttons">
-        <button type="button"> 📋 Submit a Complaint </button>
-        <button type="button"> 🔍 Track My Complaint </button>
-      </div>
-    </section>
-    <section class="stats-con">
-      <p class="stat1">
-        248
-        <span>Total Complaints</span>
-      </p>
-      <p class="stat2">
-        193
-        <span>Resolved</span>
-      </p>
-      <p class="stat3">
-        38
-        <span>In progress</span>
-      </p>
-      <p class="stat4">
-        17
-        <span>Pending Review</span>
-      </p>
-      <p class="stat5">
-        2.4d
-        <span>Avg resolution Time</span>
-      </p>
-    </section>
-
-    <section class="features">
-      <div class="features-head">
-        <div class="logo"> HOW IT WORKS </div>
-        <h2>A Better Way to Handle Complaints</h2>
-        <p>
-          No more office visits. No more lost paper forms. Everything in one
-          place.
+    <div id="home-section" class="home-section">
+      <section class="hero">
+        <h1>
+          Submit & Track Complaints <br />
+          <em>Quickly. Transparently</em>
+        </h1>
+        <p
+          >A dedicated digital platform for students of the School of Plateau
+          ICT to raise academic and administrative complaints - with real-time
+          status tracking and guaranteed staff response
         </p>
+        <div class="hero-buttons">
+          <a href="#submit-complaint" class="submit"> 📋 Submit a Complaint </a>
+          <a href="#track-status"> 🔍 Track My Complaint </a>
+        </div>
+      </section>
+      <section class="stats-con">
+        <p class="stat1">
+          248
+          <span>Total Complaints</span>
+        </p>
+        <p class="stat2">
+          193
+          <span>Resolved</span>
+        </p>
+        <p class="stat3">
+          38
+          <span>In progress</span>
+        </p>
+        <p class="stat4">
+          17
+          <span>Pending Review</span>
+        </p>
+        <p class="stat5">
+          2.4d
+          <span>Avg resolution Time</span>
+        </p>
+      </section>
+
+      <section class="features">
+        <div class="features-head">
+          <div class="logo"> HOW IT WORKS </div>
+          <h2>A Better Way to Handle Complaints</h2>
+          <p>
+            No more office visits. No more lost paper forms. Everything in one
+            place.
+          </p>
+        </div>
+        <div class="features-con">
+          <div class="card card1">
+            <div class="card-icon"> 📝 </div>
+            <h3>Submit Online</h3>
+            <p>
+              Fill in a structured complaint form from any device - anytime,
+              anywhere. No office visit needed. Your complaint is logged
+              instantly
+            </p>
+          </div>
+          <div class="card card2">
+            <div class="bell-icon"> 🔔 </div>
+            <h3>Get Notified</h3>
+            <p>
+              Recieve automatic notifications whenever your complaint status
+              changes - from submission to resolution. You're always in the
+              loop.
+            </p>
+          </div>
+          <div class="card card3">
+            <div class="check-icon"> ✅ </div>
+            <h3>Track in Real-Time</h3>
+            <p>
+              Use Your unique complaint Id to check the current status at any
+              time. Know exactly where your complaint stands in the process
+            </p>
+          </div>
+          <div class="card card4">
+            <div class="school-icon"> 🏫 </div>
+            <h3>Staff Resolution</h3>
+            <p>
+              Dedicated staff dashboard lets ICT staff review, categorise,
+              assign, and resolve complaints efficiently with full audit trails.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="submit-complaint" class="submit-complaint">
+      <div class="complaint-head">
+        <span>New Complaint</span>
+        <h2>Submit a Complaint</h2>
+        <p>
+          Complete all required fields. Your complaint will be logged and
+          assigned a unique ID for tracking. Our staff will review and respond
+          within 48 hours.
+        </p>
+
+        <div class="alert">
+          <span class="icon">⚠️</span>
+          <p>
+            Please Ensure you are logged in before submitting a complaint. All
+            complaints are confidential and reviewed by authorised staff
+            only!</p
+          >
+        </div>
       </div>
-      <div class="features-con">
-        <div class="card card1"> 
-          <div class="card-icon">
-            📝
-          </div>
-          <h3>Submit Online</h3>
-          <p>
-            Fill in a structured complaint form from any device - anytime, anywhere. No office visit needed. Your complaint is logged instantly
-          </p>
-        </div>
-        <div class="card card2"> 
-          <div class="bell-icon">
-            🔔
-          </div>
-          <h3>Get Notified</h3>
-          <p>
-            Recieve automatic notifications whenever your complaint status changes - from submission to resolution. You're always in the loop.
-          </p>
-        </div>
-        <div class="card card3"> 
-          <div class="check-icon">
-            ✅
-          </div>
-          <h3>Track in Real-Time</h3>
-          <p>
-           Use Your unique complaint Id to check the current status at any time. Know exactly where your complaint stands in the process
-          </p>
-        </div>
-        <div class="card card4"> 
-          <div class="school-icon">
-            🏫
-          </div>
-          <h3>Staff Resolution</h3>
-          <p>
-            Dedicated staff dashboard lets ICT staff review, categorise, assign, and resolve complaints efficiently with full audit trails.
-          </p>
-        </div>
+
+      <div class="form-container">
+        <form action="submit_complaint.php" method="POST">
+          <h3>Complaint Form</h3>
+        </form>
       </div>
     </section>
 
+    <footer class="footer">
+      <p>
+        Complaint Management System.
+        <span
+          >School of ICT, Plateau State Polytechnic. Built With HTML, CSS, PHP
+          and MYSQL</span
+        >
+      </p>
+      &copy; 2026. All rights reserved.
+    </footer>
 
-
-      <script>
+    <script>
       const menuIcon = document.querySelector(".fa-bars");
-      const dropDownMenu = document.querySelector(".dropdown")
+      const dropDownMenu = document.querySelector(".dropdown");
+      const homeSection = document.getElementById("home-section");
+      const submitComplaint = document.getElementById("submit-complaint");
+      const submit = document.querySelectorAll(".submit");
+      const home = document.querySelector(".hom")
 
-      menuIcon.addEventListener(
-        "click", () =>{
-            dropDownMenu.classList.toggle("open");
-            if(dropDownMenu.classList.contains("open")){
-              menuIcon.classList.add("fa-x");
-              menuIcon.classList.remove("fa-bars");
-            } else{
-              menuIcon.classList.remove("fa-x");
-              menuIcon.classList.add("fa-bars");
-            }
+      submit.forEach((button) => {
+        button.addEventListener("click", () => {
+          homeSection.style.display = "none";
+          submitComplaint.style.display = "block";
+        });
+      });
+
+      home.addEventListener("click", () => {
+        homeSection.style.display = "block";
+        submitComplaint.style.display = "none";
+      });
+
+      menuIcon.addEventListener("click", (e) => {
+        dropDownMenu.classList.toggle("open");
+        if (dropDownMenu.classList.contains("open")) {
+          menuIcon.classList.add("fa-x");
+          menuIcon.classList.remove("fa-bars");
+        } else {
+          menuIcon.classList.remove("fa-x");
+          menuIcon.classList.add("fa-bars");
         }
-      )
+        // e.stopPropagation();
+      });
+      document.addEventListener("click", (e) => {
+        if (!menuIcon.contains(e.target) && !dropDownMenu.contains(e.target)) {
+          dropDownMenu.classList.remove("open");
+          menuIcon.classList.remove("fa-x");
+          menuIcon.classList.add("fa-bars");
+        }
+      });
     </script>
   </body>
 </html>
