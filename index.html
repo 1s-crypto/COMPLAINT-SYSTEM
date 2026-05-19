@@ -1,12 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Complaint Mangement System</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="/DOM/stylesheet/css/all.min.css" /> -->
   </head>
   <body>
     <nav class="nav">
@@ -149,7 +159,7 @@
         </p>
 
         <div class="alert">
-          <span class="icon">⚠️</span>
+          <span class="icon">ℹ️</span>
           <p>
             Please Ensure you are logged in before submitting a complaint. All
             complaints are confidential and reviewed by authorised staff
@@ -160,7 +170,103 @@
 
       <div class="form-container">
         <form action="submit_complaint.php" method="POST">
-          <h3>Complaint Form</h3>
+          <div class="form-head">
+            <h3>Complaint Form</h3>
+            <p>Fields marked <strong>*</strong> are required</p>
+          </div>
+          <div class="input-fields">
+            <div class="field name-field">
+              <label for="name">Full Name <strong>*</strong></label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                placeholder="e.g. Prosper Shedrach"
+              />
+            </div>
+            <div class="field matric-field">
+              <label for="matricnumber">Matric Number <strong>*</strong></label>
+              <input
+                type="text"
+                name="name"
+                id="matricnumber"
+                required
+                placeholder="e.g. 24/23948U/9"
+              />
+            </div>
+
+            <div class="field email-field">
+              <label for="email">Email Address <strong>*</strong></label>
+              <input
+                type="email"
+                name="name"
+                id="email"
+                required
+                placeholder="student@gmail.com"
+              />
+            </div>
+          </div>
+
+          <div class="selection-fields">
+            <div class="department-con pick">
+              <label for="department">Department <strong>*</strong></label>
+              <select name="select" id="department" title="department">
+                <option value="#">Select Department</option>
+                <option value="#"> Computer Science </option>
+                <option value="#"> Information Technology </option>
+                <option value="#"> Cyber Security </option>
+                <option value="#"> Software Engineering </option>
+                <option value="#"> Information System </option>
+                <option value="#"> Artificial Intelligence </option>
+              </select>
+            </div>
+            <div class="complaint-con pick">
+              <label for="complaint">Complaint Category <strong>*</strong></label>
+              <select name="#" id="complaint" title="Complaint">
+                <option value="#">Select Category</option>
+                <option value="#">Academic</option>
+                <option value="#">Administrative</option>
+                <option value="#">Facilitied & Equipment</option>
+                <option value="#">Staff Conduct</option>
+                <option value="#">Financial</option>
+                <option value="#">Welfare</option>
+                <option value="#">Other</option>
+              </select>
+            </div>
+            <div class="priority-con pick">
+              <label for="priority">Priority Level</label>
+              <select name="#" id="priority">
+                <option value="#">Low</option>
+                <option value="#" selected>Medium</option>
+                <option value="#">High</option>
+              </select>
+            </div>
+          </div>
+          <div class="complaints-container">
+            <div class="complaint-subject">
+                <label>Complaint Subject <strong>*</strong></label>
+            <input
+              type="text"
+              placeholder="Brief title of your complaint"
+            />
+            </div>
+            <div class="detailed-decription">
+                 <label>Detailed Description <strong>*</strong></label>
+            <textarea
+              placeholder="Describe your complaint in detail. Include dates, persons involved, and any steps you have already taken..."
+             cols="5" rows="6"></textarea>
+            <span class="form-hint"
+              >Minimum 50 characters. Be as specific as possible for faster
+              resolution.</span
+            >
+            </div>
+            <div class="evidence">
+              <label for="upload">Supporting Evidence <span>(Optional)</span></label>
+              <input type="text" id="upload" placeholder="Describe any documents or evidence you have (file upload available after login)">
+              <span>Accepted Formats: PDF, JPG, PNG</span>
+            </div>
+          </div>
         </form>
       </div>
     </section>
@@ -182,7 +288,7 @@
       const homeSection = document.getElementById("home-section");
       const submitComplaint = document.getElementById("submit-complaint");
       const submit = document.querySelectorAll(".submit");
-      const home = document.querySelector(".hom")
+      const home = document.querySelector(".hom");
 
       submit.forEach((button) => {
         button.addEventListener("click", () => {

@@ -15,6 +15,7 @@ body {
     sans-serif;
 }
 
+/* Nav Bar Section */
 .nav {
   width: 100%;
   height: 68px;
@@ -67,8 +68,8 @@ body {
   font-weight: normal;
 }
 
-.home-section{
-  display: block;
+.home-section {
+  display: none;
 }
 
 .dropdown-menu {
@@ -83,15 +84,15 @@ body {
   color: white;
   background: none;
   position: relative;
-  left: 12vw;
+  left: 17.5vw;
   z-index: 100;
 }
 
 .dropdown {
   position: absolute;
-  padding: 0.8rem .4rem 1rem 0.8rem;
+  padding: 0.8rem 0.4rem 1rem 0.8rem;
   top: -90%;
-  right: -13vw;
+  right: -17.5vw;
   width: 620%;
   background-color: rgba(162, 200, 236, 0.6);
   -webkit-backdrop-filter: blur(10px);
@@ -112,7 +113,7 @@ body {
 }
 
 .fa-x {
-  color:red;
+  color: rgb(11, 28, 29);
 }
 
 li {
@@ -121,31 +122,31 @@ li {
 
 .dropdown li {
   padding-block: 1rem;
-  padding-inline: .5rem;
+  padding-inline: 0.5rem;
   display: flex;
   align-items: center;
 }
 
-.home{
+.home {
   margin-top: 5vh;
   border: 1px solid white;
-  background-color:rgb(39, 118, 184);
+  background-color: rgb(39, 118, 184);
   border-radius: 10px;
 }
 
-.login{
+.login {
   border: 1px solid white;
-  background-color:rgb(14, 159, 243);
+  background-color: orange;
   border-radius: 10px;
 }
 
-.dropdown li:not(.home,.login){
+.dropdown li:not(.home, .login) {
   border: 1px solid black;
   border-radius: 10px;
   background-color: #0d47a1;
 }
 
-.dropdown li:not(.home,.login) a{
+.dropdown li:not(.home, .login) a {
   color: rgb(149, 226, 245);
 }
 
@@ -159,14 +160,15 @@ li {
   -webkit-tap-highlight-color: transparent;
 }
 
-.dropdown li:active{
+.dropdown li:active {
   background-color: aliceblue;
 }
 
-.dropdown li:active a{
+.dropdown li:active a {
   color: black;
 }
 
+/* Hero Section */
 .hero {
   background:
     radial-gradient(circle, rgba(255, 255, 255, 0.05) 22%, transparent 22%),
@@ -203,7 +205,7 @@ li {
 
 .hero-buttons a {
   padding: 1rem;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   text-decoration: none;
   -webkit-border-radius: 10px;
@@ -221,7 +223,7 @@ li {
 .hero-buttons a:last-child {
   background-color: transparent;
   color: white;
-  border: 1px solid white;
+  border: 1px solid rgb(163, 155, 155);
 }
 
 .stats-con {
@@ -382,14 +384,17 @@ li {
   border-radius: 10px;
 }
 
-.submit-complaint{
-  background-color: rgba(171, 222, 241, 0.2);
+/* Submit Complaint Section */
+.submit-complaint {
+  height: 100%;
+  background-color: #f0f4fb;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: .5rem;
-  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  /* gap: 0.5rem; */
+  display: block;
 }
 
 .complaint-head {
@@ -404,8 +409,8 @@ li {
   justify-content: space-around;
 }
 
-.complaint-head span{
- background-color: rgba(111, 184, 253, 0.5);
+.complaint-head span {
+  background-color: rgba(111, 184, 253, 0.5);
   width: max-content;
   padding: 0.4rem;
   color: blue;
@@ -417,27 +422,27 @@ li {
   font-weight: bold;
 }
 
-.complaint-head h2{
+.complaint-head h2 {
   font-weight: bold;
   font-size: 1.8rem;
 }
 
-.complaint-head p{
+.complaint-head p {
   color: rgb(87, 85, 85);
   font-size: 1.1rem;
 }
 
-.alert{
+.alert {
   background-color: rgba(0, 174, 255, 0.1);
   border: 1px solid rgba(0, 204, 255, 0.5);
   padding: 1rem;
   display: flex;
   /* align-items: center; */
-  gap: .5rem;
+  gap: 0.5rem;
   border-radius: 10px;
 }
 
-.alert .icon{
+.alert .icon {
   font-size: 1.3rem;
   background-color: transparent;
 }
@@ -446,7 +451,146 @@ li {
   color: rgb(19, 32, 105);
 }
 
-.footer{
+.form-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(252, 252, 252);
+  padding: 1rem;
+  margin-top: 5%;
+  border: 1px solid #cfdffc;
+  border-radius: 15px;
+}
+
+form {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.form-head p {
+  color: grey;
+  margin-top: 3%;
+  font-size: 0.85rem;
+}
+
+.form-container strong {
+  color: red;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30vh;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  /* width: 50%; */
+}
+
+.input-fields input {
+  margin-top: 2%;
+  outline: none;
+  border: 1px solid #d6dae0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.input-fields input::placeholder {
+  font-size: 1rem;
+  padding-left: 10px;
+  color: rgb(177, 171, 171);
+}
+
+.name-field {
+  justify-self: start;
+}
+
+.selection-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30vh;
+}
+
+.pick {
+  display: flex;
+  flex-direction: column;
+}
+
+.pick label {
+  margin-bottom: 2%;
+}
+
+.pick select {
+  padding: 0.5rem;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #d6dae0;
+}
+
+.complaints-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 43vh;
+  margin-top: 10%;
+}
+
+.complaints-container div {
+  display: flex;
+  flex-direction: column;
+}
+
+.complaint-subject input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d6dae0;
+  margin-top: 2%;
+}
+
+.complaint-subject input::placeholder{
+  font-size: 1rem;
+}
+
+.detailed-decription span{
+  color: rgb(2, 2, 2);
+  font-size: .9rem;
+  text-align: center;
+}
+
+.detailed-decription textarea{
+  padding: .5rem;
+  border: 1px solid #d6dae0;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+  border-radius: .5rem;
+  margin-top: 2%;
+}
+
+.evidence input{
+  padding: .5rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Footer Styles */
+.footer { 
   text-align: center;
   background-color: #0a1628;
   color: white;
@@ -458,13 +602,13 @@ li {
   color: grey;
 }
 
-.footer p{
+.footer p {
   font-size: 0.9rem;
   font-weight: bold;
   color: rgb(209, 205, 205);
 }
 
-.footer p span{
+.footer p span {
   font-size: 0.8rem;
   color: grey;
   font-weight: normal;
