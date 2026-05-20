@@ -69,7 +69,7 @@ body {
 }
 
 .home-section {
-  display: none;
+  display: block;
 }
 
 .dropdown-menu {
@@ -386,7 +386,7 @@ li {
 
 /* Submit Complaint Section */
 .submit-complaint {
-  height: 100%;
+  min-height: 150vh;
   background-color: #f0f4fb;
   padding: 1rem;
   display: flex;
@@ -394,7 +394,7 @@ li {
   align-items: center;
   justify-content: space-evenly;
   /* gap: 0.5rem; */
-  display: block;
+  display: none;
 }
 
 .complaint-head {
@@ -464,7 +464,7 @@ li {
 }
 
 form {
-  height: 50%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -485,7 +485,8 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 30vh;
+  height: 27vh;
+  margin-top: 10%;
 }
 
 .field {
@@ -518,6 +519,7 @@ form {
   flex-direction: column;
   justify-content: space-between;
   height: 30vh;
+  margin-top: 10%;
 }
 
 .pick {
@@ -543,7 +545,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 43vh;
+  height: 42vh;
   margin-top: 10%;
 }
 
@@ -563,12 +565,6 @@ form {
   font-size: 1rem;
 }
 
-.detailed-decription span{
-  color: rgb(2, 2, 2);
-  font-size: .9rem;
-  text-align: center;
-}
-
 .detailed-decription textarea{
   padding: .5rem;
   border: 1px solid #d6dae0;
@@ -580,13 +576,50 @@ form {
   margin-top: 2%;
 }
 
+.detailed-decription span{
+  color: rgba(2, 2, 2, 0.603);
+  font-size: .9rem;
+  text-align: center;
+}
+
 .evidence input{
+  /* outline: none; */
   padding: .5rem;
+  margin-top: 2%;
+  margin-bottom: 1.5%;
+  border: 1px solid #d6dae0;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
+}
+
+.evidence span:last-child{
+  color: rgb(71, 71, 71);
+  font-size: .8rem;
+}
+
+.buttons{
+  display: flex;
+  margin-top: 5%;
+  gap: .5rem;
+}
+
+.buttons button{
+  padding: 1rem;
+  border-radius: 10px;
+  outline: none;
+  font-size: .9rem;
+  border: 1px solid grey;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.buttons button[type="submit"]{
+  background-color: rgb(0, 68, 255);
+  color: white;
+  font-size: 1rem;
 }
 
 /* Footer Styles */
