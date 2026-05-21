@@ -68,6 +68,7 @@ body {
   font-weight: normal;
 }
 
+/* Home Section */
 .home-section {
   display: block;
 }
@@ -93,7 +94,7 @@ body {
   padding: 0.8rem 0.4rem 1rem 0.8rem;
   top: -90%;
   right: -12.5vw;
-  width: 620%;
+  width: 40vh;
   background-color: rgba(162, 200, 236, 0.6);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -129,25 +130,42 @@ li {
 
 .home {
   margin-top: 5vh;
-  border: 1px solid white;
-  background-color: rgb(39, 118, 184);
+  /* border: 1px solid white; */
+  background-color: #50b6ac;
   border-radius: 10px;
 }
 
 .login {
-  border: 1px solid white;
-  background-color: orange;
+  /* border: 1px solid white; */
+  background-color: #e9a32a;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown .login a{
+  color: white;
+}
+
+.icon-bg{
+  background: rgba(156, 221, 230, 0.589);
+  padding: .5rem;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.active{
+  background-color: red;
 }
 
 .dropdown li:not(.home, .login) {
-  border: 1px solid black;
+  border: 1px solid rgba(224, 221, 221, 0.603);
   border-radius: 10px;
-  background-color: #0d47a1;
+  background-color: #f2f3f57a;
 }
 
 .dropdown li:not(.home, .login) a {
-  color: rgb(149, 226, 245);
+  color: rgb(4, 64, 78);
 }
 
 .dropdown li a {
@@ -156,8 +174,12 @@ li {
   font-weight: bold;
   color: rgb(19, 32, 105);
   display: block;
-  width: 100%;
+  /* width: 100%; */
   -webkit-tap-highlight-color: transparent;
+}
+
+.dropdown li a:not(.register){
+  width: 100%;
 }
 
 .dropdown li:active {
@@ -621,6 +643,8 @@ form {
   color: white;
   font-size: 1rem;
 }
+
+/* Track-Status Section */
 
 /* Footer Styles */
 .footer { 
