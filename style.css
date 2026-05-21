@@ -153,11 +153,11 @@ li {
   margin-right: 10px;
 }
 
-#active {
+.dropdown-menu .dropdown .active {
   background-color: #50b6ac;
 }
 
-#active .icon-bg i {
+.active .icon-bg i {
   color: white;
 }
 

@@ -16,15 +16,15 @@ function setDisplay(el1, el2) {
 submit.forEach((button) => {
   button.addEventListener("click", () => {
     setDisplay(homeSection, submitComplaint);
-    sumit.id = "active";
-    hom.id = "";
+  sumit.classList.add("active");
+  hom.classList.remove("active")
   });
 });
 
 home.addEventListener("click", () => {
   setDisplay(submitComplaint, homeSection);
-  hom.id = "active";
-  sumit.id = "";
+  hom.classList.add("active");
+  sumit.classList.remove("active")
 });
 
 menuIcon.addEventListener("click", () => {
