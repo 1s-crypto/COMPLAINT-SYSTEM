@@ -131,7 +131,6 @@ li {
 .home {
   margin-top: 5vh;
   /* border: 1px solid white; */
-  background-color: #50b6ac;
   border-radius: 10px;
 }
 
@@ -143,22 +142,30 @@ li {
   justify-content: center;
 }
 
-.dropdown .login a{
+.dropdown .login a {
   color: white;
 }
 
-.icon-bg{
+.icon-bg {
   background: rgba(156, 221, 230, 0.589);
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 10px;
   margin-right: 10px;
 }
 
-.active{
-  background-color: red;
+#active {
+  background-color: #50b6ac;
 }
 
-.dropdown li:not(.home, .login) {
+#active .icon-bg i {
+  color: white;
+}
+
+.icon-bg i {
+  color: rgba(2, 2, 2, 0.753);
+}
+
+.dropdown li:not(.login) {
   border: 1px solid rgba(224, 221, 221, 0.603);
   border-radius: 10px;
   background-color: #f2f3f57a;
@@ -178,7 +185,7 @@ li {
   -webkit-tap-highlight-color: transparent;
 }
 
-.dropdown li a:not(.register){
+.dropdown li a:not(.register) {
   width: 100%;
 }
 
@@ -583,30 +590,30 @@ form {
   margin-top: 2%;
 }
 
-.complaint-subject input::placeholder{
+.complaint-subject input::placeholder {
   font-size: 1rem;
 }
 
-.detailed-decription textarea{
-  padding: .5rem;
+.detailed-decription textarea {
+  padding: 0.5rem;
   border: 1px solid #d6dae0;
-  -webkit-border-radius: .5rem;
-  -moz-border-radius: .5rem;
-  -ms-border-radius: .5rem;
-  -o-border-radius: .5rem;
-  border-radius: .5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
   margin-top: 2%;
 }
 
-.detailed-decription span{
+.detailed-decription span {
   color: rgba(2, 2, 2, 0.603);
-  font-size: .9rem;
+  font-size: 0.9rem;
   text-align: center;
 }
 
-.evidence input{
+.evidence input {
   /* outline: none; */
-  padding: .5rem;
+  padding: 0.5rem;
   margin-top: 2%;
   margin-bottom: 1.5%;
   border: 1px solid #d6dae0;
@@ -617,28 +624,28 @@ form {
   border-radius: 10px;
 }
 
-.evidence span:last-child{
+.evidence span:last-child {
   color: rgb(71, 71, 71);
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
-.buttons{
+.buttons {
   display: flex;
   margin-top: 5%;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
-.buttons button{
+.buttons button {
   padding: 1rem;
   border-radius: 10px;
   outline: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
   border: 1px solid grey;
   font-weight: bold;
   background-color: transparent;
 }
 
-.buttons button[type="submit"]{
+.buttons button[type="submit"] {
   background-color: rgb(0, 68, 255);
   color: white;
   font-size: 1rem;
@@ -647,7 +654,7 @@ form {
 /* Track-Status Section */
 
 /* Footer Styles */
-.footer { 
+.footer {
   text-align: center;
   background-color: #0a1628;
   color: white;
