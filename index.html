@@ -16,7 +16,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <link rel="stylesheet" href="/DOM/stylesheet/css/all.min.css" /> -->
   </head>
   <body>
     <nav class="nav">
@@ -33,7 +32,7 @@
           <i class="fas fa-bars fa-2xl"></i>
         </button>
         <ul class="dropdown">
-          <li class="home active"
+          <li class="home active item"
             ><a href="#home-section" class="hom">
               <span class="icon-bg">
                 <i class="fa fa-home"></i>
@@ -41,7 +40,7 @@
               Home</a
             ></li
           >
-          <li class="sumit"
+          <li class="sumit item"
             ><a href="#submit-complaint" class="submit">
               <span class="icon-bg">
                 <i class="fa fa-paper-plane"></i>
@@ -49,7 +48,7 @@
               Submit Complaint</a
             ></li
           >
-          <li
+          <li class="track-status item"
             ><a href="#track-status">
               <span class="icon-bg">
                 <i class="fa fa-wave-square"></i>
@@ -57,7 +56,7 @@
               Track Status</a
             ></li
           >
-          <li
+          <li class="staff-dashboard item"
             ><a href="#staff-dashboard">
               <span class="icon-bg">
                 <i class="fa fa-border-all"></i>
@@ -77,7 +76,7 @@
       </div>
     </nav>
     <!-- Home-section -->
-    <section id="home-section" class="home-section visible">
+    <section id="home-section" class="home-section section">
       <section class="hero">
         <h1>
           Submit & Track Complaints <br />
@@ -89,8 +88,10 @@
           status tracking and guaranteed staff response
         </p>
         <div class="hero-buttons">
-          <a href="#submit-complaint" class="submit"> 📋 Submit a Complaint </a>
-          <a href="#track-status"> 🔍 Track My Complaint </a>
+          <a href="#submit-complaint" class="submit-home">
+            📋 Submit a Complaint
+          </a>
+          <a href="#track-status" class="track-home"> 🔍 Track My Complaint </a>
         </div>
       </section>
       <section class="stats-con">
@@ -165,7 +166,7 @@
     </section>
 
     <!-- Submit-Complaint Section -->
-    <section id="submit-complaint" class="submit-complaint">
+    <section id="submit-complaint" class="submit-complaint section">
       <div class="complaint-head">
         <span>New Complaint</span>
         <h2>Submit a Complaint</h2>
@@ -300,7 +301,28 @@
     </section>
 
     <!-- Track-Status Section -->
-    <section id="track-status"> </section>
+    <section id="track-status" class="track-status-section section">
+      <div class="track-container">
+        <div class="track-head">
+          <span>Complaint Tracker</span>
+          <h2>Track Your Complaint</h2>
+          <p
+            >Enter your complaint ID or email to see the current status and
+            history</p
+          >
+        </div>
+
+        <div class="complaint">
+          <div class="search">
+            <h3>Complaint ID</h3>
+            <input type="text" id="text" value="#CMS-233" />
+          </div>
+          <div class="search-btn">
+            <button type="button"> 🔍 Search </button>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
       <p>
         Complaint Management System.
